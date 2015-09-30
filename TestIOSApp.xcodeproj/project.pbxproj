@@ -14,6 +14,8 @@
 		5DE8FDDD1BAB5B260070E8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8FDDC1BAB5B260070E8A0 /* Assets.xcassets */; };
 		5DE8FDE01BAB5B260070E8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8FDDE1BAB5B260070E8A0 /* LaunchScreen.storyboard */; };
 		5DE8FDEB1BAB5B260070E8A0 /* TestIOSAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8FDEA1BAB5B260070E8A0 /* TestIOSAppUITests.m */; };
+		5DF7369A1BBB342A0046909E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF736981BBB342A0046909E /* Fabric.framework */; };
+		5DF7369B1BBB342A0046909E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF736991BBB342A0046909E /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5DE8FDE61BAB5B260070E8A0 /* TestIOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestIOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE8FDEA1BAB5B260070E8A0 /* TestIOSAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIOSAppUITests.m; sourceTree = "<group>"; };
 		5DE8FDEC1BAB5B260070E8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF736981BBB342A0046909E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5DF736991BBB342A0046909E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF7369B1BBB342A0046909E /* Crashlytics.framework in Frameworks */,
+				5DF7369A1BBB342A0046909E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		5DE8FDC41BAB5B260070E8A0 = {
 			isa = PBXGroup;
 			children = (
+				5DF736981BBB342A0046909E /* Fabric.framework */,
+				5DF736991BBB342A0046909E /* Crashlytics.framework */,
 				5DE8FDCF1BAB5B260070E8A0 /* TestIOSApp */,
 				5DE8FDE91BAB5B260070E8A0 /* TestIOSAppUITests */,
 				5DE8FDCE1BAB5B260070E8A0 /* Products */,
@@ -121,6 +129,7 @@
 				5DE8FDC91BAB5B260070E8A0 /* Sources */,
 				5DE8FDCA1BAB5B260070E8A0 /* Frameworks */,
 				5DE8FDCB1BAB5B260070E8A0 /* Resources */,
+				5DF736971BBB34050046909E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,6 +169,7 @@
 				TargetAttributes = {
 					5DE8FDCC1BAB5B260070E8A0 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = C652X3BGNG;
 					};
 					5DE8FDE51BAB5B260070E8A0 = {
 						CreatedOnToolsVersion = 7.1;
@@ -205,6 +215,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DF736971BBB34050046909E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b21d81047e3aab2ee6829e58c34dca558347e55d 3d53e82288fea42eca33b32989ff2a44c785228bd68d6b7390cbce11fe9bee92";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DE8FDC91BAB5B260070E8A0 /* Sources */ = {
@@ -272,6 +298,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -294,6 +321,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "b9ce5fc2-59c3-448d-8975-c02fa9569a66";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +344,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -331,6 +360,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "aced2409-c61a-4beb-bd8e-ff12b1aeea34";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -341,11 +371,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestIOSApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NitinAlabur.TestIOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,11 +390,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestIOSApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NitinAlabur.TestIOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -404,6 +448,7 @@
 				5DE8FDF11BAB5B260070E8A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DE8FDF21BAB5B260070E8A0 /* Build configuration list for PBXNativeTarget "TestIOSAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +457,7 @@
 				5DE8FDF41BAB5B260070E8A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
