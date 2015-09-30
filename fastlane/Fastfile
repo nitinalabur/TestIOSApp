@@ -1,0 +1,104 @@
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# By default, fastlane will send which actions are used
+# No personal data is shared, more information on https://github.com/fastlane/enhancer
+# Uncomment the following line to opt out
+# opt_out_usage
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.26.0"
+
+default_platform :ios
+
+
+platform :ios do
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = "/Users/nalabur/Desktop/Repos/TestIOSApp/Crashlytics.framework"
+    ENV["CRASHLYTICS_API_TOKEN"] = "b21d81047e3aab2ee6829e58c34dca558347e55d"
+    ENV["CRASHLYTICS_BUILD_SECRET"] = "3d53e82288fea42eca33b32989ff2a44c785228bd68d6b7390cbce11fe9bee92"
+    ENV["SIGH_TEAM_NAME"] = "Nitin Alabur"
+    ENV["SIGH_TEAM_ID"]
+    ENV["SIGH_PROVISIONING_PROFILE_NAME"] = "iOSTeam Provisioning Profile: NitinAlabur.TestIOSApp"
+    # increment_build_number
+
+    gym(scheme: "TestIOSApp") # Build your app - more options available
+
+    # xctool # run the tests of your app
+  end
+
+
+  desc "Test fastlane integration locally"
+  lane :testFastlane do
+  	# cert
+  	# sigh
+    team_name "Nitin Alabur"
+    # register_devices
+  	gym(scheme: "TestIOSApp")
+    crashlytics
+  end
+
+
+
+  desc "Runs all the tests"
+  lane :test do
+    snapshot
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    snapshot
+    sigh
+    deliver(beta: true)
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+  desc "Deploy a new version to the App Store"
+  desc "** Full Markdown** Support: `code`"
+  lane :deploy do
+    snapshot
+    sigh
+    deliver(skip_deploy: true, force: true)
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+    
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+
+  # register_devices(
+  # devices: {
+  #   'Nitin iPhone 6Plus' => '638fd98255bbaca7cd2bcf3d61ae515cc61b8c5a',
+  #   }
+  # )
+end
+
+
+# More information about multiple platforms in fastlane: 
+# https://github.com/KrauseFx/fastlane/blob/master/docs/Platforms.md
