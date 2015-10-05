@@ -4,11 +4,11 @@
 // var app = target.frontMostApp();
 // var window = app.mainWindow();
 
-
-// target.delay(3)
-// captureLocalizedScreenshot("0-LandingScreen")
-
 var target = UIATarget.localTarget();
+captureLocalizedScreenshot("0-LandingScreen")
+
+target.delay(3)
+
 // target.scheme = TestIOSApp
 target.setDeviceOrientation(UIA_DEVICE_ORIENTATION_PORTRAIT);
 target.frontMostApp().mainWindow().buttons()["Button 1"].tap();
