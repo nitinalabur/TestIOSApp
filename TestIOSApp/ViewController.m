@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *centerLabel;
 
 @end
 
@@ -22,6 +23,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)buttonTapped:(id)sender {
+    UIButton *tappedButton = (UIButton *)sender;
+    self.centerLabel.text = [NSString stringWithFormat:@"%@ Tapped", tappedButton.titleLabel.text];
 }
 
 @end

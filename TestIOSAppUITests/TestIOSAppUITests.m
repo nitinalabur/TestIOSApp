@@ -35,6 +35,18 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"Button 1"] tap];
+    [app.buttons[@"Button 2"] tap];
+    [app.buttons[@"Button 3"] tap];
+    [app.buttons[@"Button 4"] tap];
+    
+    XCUIElement *button4TappedElement = [app.otherElements containingType:XCUIElementTypeStaticText identifier:@"Button 4 Tapped"].element;
+    [button4TappedElement tap];
+    [button4TappedElement tap];
+    [app.staticTexts[@"Button 4 Tapped"] tap];
+    
 }
 
 @end
