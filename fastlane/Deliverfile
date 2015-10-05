@@ -1,12 +1,12 @@
 ###################### App Metadata ######################
 # 
-# title(
-#   "en-US" => "Your App Name"
-# )
+ title(
+   "en-US" => "Test IOS App Nitin"
+ )
 # 
-# changelog(
-#   "en-US" => "iPhone 6 (Plus) Support" 
-# )
+ changelog(
+   "en-US" => "place holder for changelog" 
+ )
 # More options: https://github.com/KrauseFx/deliver/blob/master/Deliverfile.md
 
 ###################### Screenshots ######################
