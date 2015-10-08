@@ -8,3 +8,15 @@
 
 app_identifier "NitinAlabur.TestIOSApp" # The bundle identifier of your app
 username "nitinalabur@gmail.com" # your Apple ID user
+submit_for_review true
+force true
+price_tier 0
+app_review_information(
+  first_name: "Nitin",
+  last_name: "Alabur",
+  phone_number: "6666666666",
+  email_address: "randomemail@someISP.com",
+  demo_user: "demoUser",
+  demo_password: "demoPass",
+  notes: "example notes on how to use the app"
+)
