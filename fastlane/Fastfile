@@ -43,7 +43,7 @@ platform :ios do
   	team_name "Nitin Alabur"
   	cert
   	sigh
-    snapshot
+    # snapshot
     # register_devices
   	gym(scheme: "TestIOSApp")
     deliver(force: true)
