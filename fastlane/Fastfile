@@ -24,7 +24,7 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = "../Crashlytics.framework"
+    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = "./Crashlytics.framework"
     ENV["CRASHLYTICS_API_TOKEN"] = "b21d81047e3aab2ee6829e58c34dca558347e55d"
     ENV["CRASHLYTICS_BUILD_SECRET"] = "3d53e82288fea42eca33b32989ff2a44c785228bd68d6b7390cbce11fe9bee92"
     ENV["SIGH_TEAM_NAME"] = "Nitin Alabur"
@@ -45,8 +45,8 @@ platform :ios do
   	sigh
     # snapshot
     # register_devices
-    # crashlytics
   	gym(scheme: "TestIOSApp")
+    crashlytics
     # deliver(force: true)
     
   end
