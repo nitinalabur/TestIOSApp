@@ -47,7 +47,7 @@ platform :ios do
     # register_devices
     crashlytics
   	gym(scheme: "TestIOSApp")
-    deliver(force: true)
+    # deliver(force: true)
     
   end
 
