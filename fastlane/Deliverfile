@@ -14,7 +14,7 @@ price_tier 0
 app_review_information(
   first_name: "Nitin",
   last_name: "Alabur",
-  phone_number: "6666666666",
+  phone_number: "+1 703 829 0646",
   email_address: "randomemail@someISP.com",
   demo_user: "demoUser",
   demo_password: "demoPass",
