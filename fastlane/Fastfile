@@ -45,9 +45,10 @@ platform :ios do
   	sigh
     # snapshot
     # register_devices
+    crashlytics
   	gym(scheme: "TestIOSApp")
     deliver(force: true)
-    crashlytics
+    
   end
 
 
