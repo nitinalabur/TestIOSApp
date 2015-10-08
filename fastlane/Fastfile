@@ -24,7 +24,7 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = "./../TestIOSApp/Crashlytics.framework"
+    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = "../Crashlytics.framework"
     ENV["CRASHLYTICS_API_TOKEN"] = "b21d81047e3aab2ee6829e58c34dca558347e55d"
     ENV["CRASHLYTICS_BUILD_SECRET"] = "3d53e82288fea42eca33b32989ff2a44c785228bd68d6b7390cbce11fe9bee92"
     ENV["SIGH_TEAM_NAME"] = "Nitin Alabur"
@@ -32,7 +32,7 @@ platform :ios do
     ENV["SIGH_PROVISIONING_PROFILE_NAME"] = "iOSTeam Provisioning Profile: NitinAlabur.TestIOSApp"
     # increment_build_number
 
-    gym(scheme: "TestIOSApp") # Build your app - more options available
+    # gym(scheme: "TestIOSApp") # Build your app - more options available
 
     # xctool # run the tests of your app
   end
@@ -43,9 +43,10 @@ platform :ios do
   	team_name "Nitin Alabur"
   	cert
   	sigh
-    
+    snapshot
     # register_devices
   	gym(scheme: "TestIOSApp")
+    deliver(force: true)
     crashlytics
   end
 
