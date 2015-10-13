@@ -16,6 +16,7 @@
 		5DE8FDEB1BAB5B260070E8A0 /* TestIOSAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE8FDEA1BAB5B260070E8A0 /* TestIOSAppUITests.m */; };
 		5DF7369A1BBB342A0046909E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF736981BBB342A0046909E /* Fabric.framework */; };
 		5DF7369B1BBB342A0046909E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF736991BBB342A0046909E /* Crashlytics.framework */; };
+		A67433BA1BCD526B00AD0198 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A67433B91BCD526B00AD0198 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5DE8FDEC1BAB5B260070E8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF736981BBB342A0046909E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		5DF736991BBB342A0046909E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A67433B91BCD526B00AD0198 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				5DE8FDDC1BAB5B260070E8A0 /* Assets.xcassets */,
 				5DE8FDDE1BAB5B260070E8A0 /* LaunchScreen.storyboard */,
 				5DE8FDE11BAB5B260070E8A0 /* Info.plist */,
+				A67433B91BCD526B00AD0198 /* Default-568h@2x.png */,
 				5DE8FDD01BAB5B260070E8A0 /* Supporting Files */,
 			);
 			path = TestIOSApp;
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE8FDE01BAB5B260070E8A0 /* LaunchScreen.storyboard in Resources */,
+				A67433BA1BCD526B00AD0198 /* Default-568h@2x.png in Resources */,
 				5DE8FDDD1BAB5B260070E8A0 /* Assets.xcassets in Resources */,
 				5DE8FDDB1BAB5B260070E8A0 /* Main.storyboard in Resources */,
 			);
