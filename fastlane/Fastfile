@@ -47,13 +47,14 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
+    xctool
     # commit_version_bump
     # path = './TestIOSApp/Info.plist'
     # message = "Updating to #{build_number}"
     # git_commit(path: paths, message: message)
     # ensure_git_status_clean
     clean_build_artifacts
-  	gym(scheme: "TestIOSApp")
+  	# gym(scheme: "TestIOSApp")
     crashlytics
     deliver
   end
