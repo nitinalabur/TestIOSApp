@@ -46,6 +46,7 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
+    ensure_git_status_clean
   	gym(scheme: "TestIOSApp")
     crashlytics
     deliver
