@@ -47,7 +47,7 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
-    xctool
+    xctool(scheme: TestIOSApp)
     # commit_version_bump
     # path = './TestIOSApp/Info.plist'
     # message = "Updating to #{build_number}"
