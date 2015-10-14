@@ -40,6 +40,8 @@ platform :ios do
 
   desc "Test fastlane integration locally"
   lane :testFastlane do
+    update_fastlane
+    clean_build_artifacts
   	team_name "Nitin Alabur"
   	cert
   	sigh
