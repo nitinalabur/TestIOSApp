@@ -47,6 +47,7 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
+    commit_version_bump
     # xctool(scheme: TestIOSApp)
     # commit_version_bump
     # path = './TestIOSApp/Info.plist'
