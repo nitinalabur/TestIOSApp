@@ -45,7 +45,7 @@ platform :ios do
   	sigh
     # snapshot
     # register_devices
-    increment_build_number (build_number: ENV['BUILD_NUMBER')
+    increment_build_number (build_number: ENV['BUILD_NUMBER'])
     commit_version_bump
     path = './TestIOSApp/Info.plist'
     message = "Updating to #{build_number}"
