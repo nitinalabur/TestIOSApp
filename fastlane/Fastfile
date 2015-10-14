@@ -30,6 +30,7 @@ platform :ios do
     ENV["SIGH_TEAM_NAME"] = "Nitin Alabur"
     ENV["SIGH_TEAM_ID"] = 
     ENV["SIGH_PROVISIONING_PROFILE_NAME"] = "iOSTeam Provisioning Profile: NitinAlabur.TestIOSApp"
+    ENV["FL_COMMIT_BUMP_MESSAGE"] = "bumping build number"
     # increment_build_number
 
     # gym(scheme: "TestIOSApp") # Build your app - more options available
@@ -47,7 +48,7 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
-    commit_version_bump (message: "updating build number")
+    commit_version_bump
     # xctool(scheme: TestIOSApp)
     # commit_version_bump
     # path = './TestIOSApp/Info.plist'
