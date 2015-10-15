@@ -55,7 +55,7 @@ platform :ios do
     # message = "Updating to #{build_number}"
     # git_commit(path: paths, message: message)
     # ensure_git_status_clean
-  	gym(clean: true, scheme: "TestIOSApp")
+  	gym(scheme: "TestIOSApp")
 
     crashlytics
     deliver
