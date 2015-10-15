@@ -29,7 +29,7 @@ platform :ios do
     ENV["CRASHLYTICS_BUILD_SECRET"] = "3d53e82288fea42eca33b32989ff2a44c785228bd68d6b7390cbce11fe9bee92"
     ENV["SIGH_TEAM_NAME"] = "Nitin Alabur"
     ENV["SIGH_TEAM_ID"] = 
-    ENV["SIGH_PROVISIONING_PROFILE_NAME"] = "iOSTeam Provisioning Profile: NitinAlabur.TestIOSApp"
+    # ENV["SIGH_PROVISIONING_PROFILE_NAME"] = "iOSTeam Provisioning Profile: NitinAlabur.TestIOSApp"
     ENV["FL_COMMIT_BUMP_MESSAGE"] = "bumping build number"
     # increment_build_number
 
