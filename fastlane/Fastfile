@@ -42,6 +42,7 @@ platform :ios do
   desc "Test fastlane integration locally"
   lane :testFastlane do
     team_name "Nitin Alabur"
+    clean_build_artifacts
   	cert
   	sigh
     # snapshot
@@ -54,7 +55,6 @@ platform :ios do
     # message = "Updating to #{build_number}"
     # git_commit(path: paths, message: message)
     # ensure_git_status_clean
-    clean_build_artifacts
   	gym(clean: true, scheme: "TestIOSApp")
 
     crashlytics
