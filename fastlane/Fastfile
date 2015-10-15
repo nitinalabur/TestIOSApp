@@ -55,7 +55,7 @@ platform :ios do
     # git_commit(path: paths, message: message)
     # ensure_git_status_clean
     clean_build_artifacts
-  	gym(scheme: "TestIOSApp")
+  	gym(clean: true, scheme: "TestIOSApp")
 
     crashlytics
     deliver
