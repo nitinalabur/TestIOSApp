@@ -50,9 +50,11 @@ platform :ios do
     increment_build_number
     commit_version_bump(force: true)
     sh(
-      git checkout -b temp
+      git branch temp
+      git checkout temp
       git branch -f master temp
       git checkout master
+      git branch -d temp
       )
     push_to_git_remote
     # xctool(scheme: TestIOSApp)
