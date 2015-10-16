@@ -48,8 +48,13 @@ platform :ios do
     # snapshot
     # register_devices
     increment_build_number
-    # commit_version_bump(force: true)
-    # push_to_git_remote
+    commit_version_bump(force: true)
+    sh(
+      git checkout -b temp
+      git branch -f master temp
+      git checkout master
+      )
+    push_to_git_remote
     # xctool(scheme: TestIOSApp)
     # commit_version_bump
     # path = './TestIOSApp/Info.plist'
