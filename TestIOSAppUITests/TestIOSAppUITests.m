@@ -46,7 +46,12 @@
     [button4TappedElement tap];
     [button4TappedElement tap];
     [app.staticTexts[@"Button 4 Tapped"] tap];
-    
+}
+- (void)testFail {
+    XCTAssertEqual(1, 0);
+}
+- (void)testPass {
+    XCTAssertEqual(1, 1);
 }
 
 @end
