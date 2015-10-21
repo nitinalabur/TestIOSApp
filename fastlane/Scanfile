@@ -11,3 +11,5 @@
 # skip_html_open true
 
 # clean true
+slack_url "https://hooks.slack.com/services/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"
+scheme "TestIOSAppUITests"
